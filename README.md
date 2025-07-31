@@ -10,6 +10,7 @@ It is basically a blank board where you can paste links, images, gifs or videos 
  - I'm taking some inspiration from moodboard appls like Ar*ena, Behance and Cosmos.
 
 The app will feature a login function so users can access their moodboards across different devices. An authorisation function will ensure that their data and privacy is well-protected from hackers and people with malicious intent. - Maybe I'll even add a human verification step.
+--> the login function will use google accounts which will be the profile
 
 My moodboard will have different themes and customisable options. It allows users to:
 - move items around
@@ -45,3 +46,18 @@ the system shouldn't overload and is expected to have a good response time.
 
 
 This entire coding process should not be too difficult because there are tutorials online and what i have decided to do follows closely to the conent we learnt in grok.
+
+
+## Vision Wireframe
+The social network I'm designing will be called Vision.
+!![alt text](Vision Website Wireframe 1.jpg)
+!![alt text](Vision Website Wireframe 2.jpg)
+
+Note: it is a Design Website, not app
+The style I am going for is a simple and elegant. I'm planning on using font Vollkorn. 
+This is the logo
+!![alt text](Sunglasses glyph style _ Free Vector.jpg)
+
+My colour palette will be grey because grey is a flexible colour which will adapt to different moodboard themes. I've tried to keep the website simple because my capabilities, time and recources are limited, however I should be able to create a simple model of this design.
+
+Next week I'm planning on refining my web design on Wix because so far it is very rough, and I need to see how it will look and flow on a laptop.
