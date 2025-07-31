@@ -46,3 +46,13 @@ the system shouldn't overload and is expected to have a good response time.
 
 
 This entire coding process should not be too difficult because there are tutorials online and what i have decided to do follows closely to the conent we learnt in grok.
+
+
+
+## Vision Wireframe
+The social network I'm designing will be called Vision.
+Note: it is a Design Website, not app
+The style I am going for is a simple and elegant. I'm planning on using font Vollkorn. 
+My colour palette will be grey because grey is a flexible colour which will adapt to different moodboard themes. I've tried to keep the website simple because my capabilities, time and recources are limited, however I should be able to create a simple model of this design.
+
+Next week I'm planning on refining my web design on Wix because so far it is very rough, and I need to see how it will look and flow on a laptop.
