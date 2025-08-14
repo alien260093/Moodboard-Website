@@ -68,8 +68,8 @@ The complexity of my algorithm is simple and should successfully meet performanc
 Since the algorithm is simply to check whether the inputted data is correct and is very simple, there shouldn't be any scaling difficulties with user input. For exmaple, if the user input password is a paragraph long, there shouldn't be any problems with confirming it's validity. In addition, the login function operates independently for each user, meaning it wouldn't face server overload or any difficulties associated with cross-user functions.
 
 ### Implement and Testing of the login function
-I'm going to implement the login algorithm in Spyder. Here is a copy of the code:
-	![alt text](Login algorithm code.jpg)
+I'm going to implement the login algorithm in Spyder. I've attatched a copy of the code(Login algorithm code).
+
 
     
 
