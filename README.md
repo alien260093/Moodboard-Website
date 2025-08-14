@@ -68,17 +68,11 @@ The complexity of my algorithm is simple and should successfully meet performanc
 Since the algorithm is simply to check whether the inputted data is correct and is very simple, there shouldn't be any scaling difficulties with user input. For exmaple, if the user input password is a paragraph long, there shouldn't be any problems with confirming it's validity. In addition, the login function operates independently for each user, meaning it wouldn't face server overload or any difficulties associated with cross-user functions.
 
 ### Implement and Testing of the login function
-I'm going to implement the login algorithm in Spyder. I've attatched a copy of the code(Login algorithm code).
+I'm going to implement the login algorithm in Spyder - I've attatched a copy of the code and how it runs(Login algorithm code).
+In regards to how the algorithm should operate, I've attatched a flowchart of the basic process(login algorithm flowchart) and a flowchart of how the code runs(Flowchart for Login Code - upload friday).
 
 
-    
-
-Developer: a) Design an algorithm for one functional component of your web application. MAKE SURE your algorithm is a STEP BY STEP outline of how input is processed/checked/stored by the system and produces an output. 
-Functional components examples - web messaging system, login screen functionality, events posting, commenting on posts etc.
-
-b) Design 2 test cases to discuss with your client - see "Test Case Template & Example" in the web link below entitled "HOw to create Test Cases" - you do not need to complete the ACTUAL RESULT and PASS/FAIL component at this stage 
-
-### Test Case Example:
+### Test Cases
 Let’s say you’re testing the login functionality of an app (This is the simplest example). Here’s how you could fill out the template:
 
 Test Case ID: TC001
