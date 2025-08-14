@@ -61,14 +61,17 @@ Next week I'm planning on refining my web design on Wix because so far it is ver
 
 ## Designing an algorithm: The Login Algorithm
 ### My evaluation of my login function
-The algorithm I'm planning to design for Vision is the login function. This would include starting on the login page --> inputting username and password and checking the terms and conditions box --> pressing the login button --> being brought to the home page.
+The algorithm I'm planning to design for Vision is the login function. This would include starting on the login page --> inputting username and password and checking the terms and conditions box --> pressing the login button --> being brought to the home page. The verification will work for the user's google account only. In order for the verification to work, the user username and password must match with an existing google account.
 
-The complexity of my algorithm is simple and should successfully meet performance requirements. The login process I'm designing my algorithm for is relatively simple, the conditions that must be met to login include: correct username input, correct password input and ticking the "I agree to the Terms & Conditions" box. After these conditions are met, the user should be able to successfully login and enter the Vision Homepage. In designing this algorithm I'm only considering the login process and not other elements involved in the login like the link to the Terms & Conditions page or the loading page screen.
+The complexity of my algorithm is simple and should successfully meet performance requirements. The login process I'm designing my algorithm for is relatively simple, the conditions that must be met to login include: correct username input, correct password input and ticking the "I agree to the Terms & Conditions" box. After these conditions are met, the user should be able to successfully login and enter the Vision Homepage. In designing this algorithm I'm only considering the login process and not other elements involved in the login like the retriving google account details, the "create an account" link, the link to the Terms & Conditions page or the loading page screen. I've decided there will be two error messages "Terms & Conditions not agreed to" and "Username or password is incorrect" rather than specifying each incorrect input because this makes it harders for hackers to sign in.
 
 Since the algorithm is simply to check whether the inputted data is correct and is very simple, there shouldn't be any scaling difficulties with user input. For exmaple, if the user input password is a paragraph long, there shouldn't be any problems with confirming it's validity. In addition, the login function operates independently for each user, meaning it wouldn't face server overload or any difficulties associated with cross-user functions.
 
 ### Implement and Testing of the login function
-Translate the algorithm into code using a suitable programming language and rigorously test it with various inputs, to validate its correctness and robustness.
+I'm going to implement the login algorithm in Spyder. Here is a copy of the code:
+	![alt text](Login algorithm code.jpg)
+
+    
 
 Developer: a) Design an algorithm for one functional component of your web application. MAKE SURE your algorithm is a STEP BY STEP outline of how input is processed/checked/stored by the system and produces an output. 
 Functional components examples - web messaging system, login screen functionality, events posting, commenting on posts etc.
