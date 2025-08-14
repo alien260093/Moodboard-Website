@@ -73,16 +73,33 @@ In regards to how the algorithm should operate, I've attatched a flowchart of th
 
 
 ### Test Cases
-Let’s say you’re testing the login functionality of an app (This is the simplest example). Here’s how you could fill out the template:
+These are the test cases for the login function.
 
-Test Case ID: TC001
-Test Case Name: Verify user login
-Preconditions: User must have a registered account.
+Test Case ID: 1
+Test Case Name: User Login process
+Preconditions: User must be on the vision login page and user must have a google account.
 Test Steps:
-Open the application.
-Enter valid username and password.
-Click the “Login” button.
+1. Open the login page.
+2. Check box "I agree to the Terms & Conditions"
+3. Enter valid username and password.
+4. Click the “Login” button.
 Expected Result: The user is directed to the homepage.
-Actual Result: To be filled after execution.
-Pass/Fail: To be filled after execution.
+Actual Result: The user successfully logs in and is directed to the home page.
+Pass/Fail: passed
 Priority: High
+
+Test Case ID: 2
+Test Case Name: User Login process
+Preconditions: User must be on the Vision login page and user must have a google account.
+Test Steps:
+1. Open the login page.
+2. Check box "I agree to the Terms & Conditions"
+3. Enter invalid username and password.
+4. Click the “Login” button.
+Expected Result: The error message "incorrect username or password" pops up.
+Actual Result: The error message "incorrect username or password" pops up.
+Pass/Fail: passed
+Priority: High
+
+does this algorithm ALIGN WITH THE STATED PURPOSE OF THE APP and meet the client needs?
+Yes, the purpose of the app is to allow users to collaborate together on an artistic project using moodboard. Having this google login functions allows users to protect their privacy, save their moodboard projects and share these projects with specific individuals. This login enables users to collaborate together on the same project at the same time.
