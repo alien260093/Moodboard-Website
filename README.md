@@ -69,7 +69,7 @@ Since the algorithm is simply to check whether the inputted data is correct and 
 
 ### Implement and Testing of the login function
 I'm going to implement the login algorithm in Spyder - I've attatched a copy of the code and how it runs(Login algorithm code).
-In regards to how the algorithm should operate, I've attatched a flowchart of the basic process(login algorithm flowchart) and a flowchart of how the code runs(Flowchart for Login Code - upload friday).
+In regards to how the algorithm should operate, I've attatched a flowchart of the basic process(login algorithm flowchart)).
 
 
 ### Test Cases
@@ -103,3 +103,53 @@ Priority: High
 
 does this algorithm ALIGN WITH THE STATED PURPOSE OF THE APP and meet the client needs?
 Yes, the purpose of the app is to allow users to collaborate together on an artistic project using moodboard. Having this google login functions allows users to protect their privacy, save their moodboard projects and share these projects with specific individuals. This login enables users to collaborate together on the same project at the same time.
+
+-sync to cloud function
+
+## Setting up SQL
+SQL has been successfully set up 21/8/2025
+
+Creating my own database structure - consider table names, data headings, primary keys, foreign keys, types of data stored etc.
+Considerations for my data:
+--
+what data do you want stored during the use of your app?
+the different google users
+any moodboard projects
+any and all imported assets
+comments/feedback database
+collaborators database
+tags databas(favourite or not favourite)
+
+what data you want displayed on your front end?
+Moodboard project names, pictures and tags
+Images and names of imported assets
+The profiles and external information of users
+The profiles of collaborators
+Comments: The dates they were made and the content of the comment
+
+what data is related to each other - needing keys set-up for each table
+arrows and explainations for the flow
+
+what data types should for elements be in your database (text, numeric, image etc)
+Integer
+Floating point
+string
+boolean
+date
+time
+
+what queries might you need to write (between and across tables) allowing for good information storage and retrieval
+Potential data query types needed:
+- exact match(search bar), nearest neighbour(recent moodboards)
+- Insertion, deletion and update queries
+end. use canva.
+
+
+c) Create test data to enter into your backend - manually enter some test data to check the structure works and then work on collecting/creating more data to import in Excel or manually.
+this will take very long :(
+
+d) Write a series (5+) of SQL queries to combine and test your data is displaying correctly from your tables - read through SQL Tutorial
+for some ideas - PS. SELECT * FROM "Table" is only a very, very basic Query - create several from across tables showing joins and MEANINGFUL data that a user might find useful.
+
+Client: developer presents their database structure and queries to you. Discuss whether you see any problems coming from the table
+setup, the test data or whether the queries are useful or not for front end display (does it make sense and would it work as intended?) Does the developer understand what is needed for back-end to be constructed properly or not? Are you confident they have designed and created a ROBUST backend for your web app?
