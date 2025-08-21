@@ -109,9 +109,10 @@ Yes, the purpose of the app is to allow users to collaborate together on an arti
 ## Setting up SQL
 SQL has been successfully set up 21/8/2025
 
-Creating my own database structure - consider table names, data headings, primary keys, foreign keys, types of data stored etc.
+### Creating my own database structure 
+- consider table names, data headings, primary keys, foreign keys, types of data stored etc.
+- 
 Considerations for my data:
---
 what data do you want stored during the use of your app?
 the different google users
 any moodboard projects
@@ -127,8 +128,8 @@ The profiles and external information of users
 The profiles of collaborators
 Comments: The dates they were made and the content of the comment
 
-what data is related to each other - needing keys set-up for each table
-arrows and explainations for the flow
+To understand and explain what data is related to each other, I must use arrows and explain the flow. 
+How the data will be used and interact with other data in the backend, and how that will appear on the frontend.
 
 what data types should for elements be in your database (text, numeric, image etc)
 Integer
@@ -141,9 +142,9 @@ time
 what queries might you need to write (between and across tables) allowing for good information storage and retrieval
 Potential data query types needed:
 - exact match(search bar), nearest neighbour(recent moodboards)
-- Insertion, deletion and update queries
-end. use canva.
+- Insertion, deletion and update queries for moodboards and during moodboard editing.
 
+use lucidchart
 
 c) Create test data to enter into your backend - manually enter some test data to check the structure works and then work on collecting/creating more data to import in Excel or manually.
 this will take very long :(
