@@ -111,7 +111,6 @@ SQL has been successfully set up 21/8/2025
 
 ### Creating my own database structure 
 - consider table names, data headings, primary keys, foreign keys, types of data stored etc.
-- 
 Considerations for my data:
 what data do you want stored during the use of your app?
 the different google users
@@ -129,28 +128,28 @@ The profiles of collaborators
 Comments: The dates they were made and the content of the comment
 
 To understand and explain what data is related to each other, I must use arrows and explain the flow. 
-How the data will be used and interact with other data in the backend, and how that will appear on the frontend.
+How the data will be used and interact with other data in the backend.
 
 what data types should for elements be in your database (text, numeric, image etc)
 Integer
-Floating point
 string
 boolean
-date
-time
+datetime
+content(assets can be any type: text, images, links and videos)
 
 what queries might you need to write (between and across tables) allowing for good information storage and retrieval
 Potential data query types needed:
 - exact match(search bar), nearest neighbour(recent moodboards)
+- neraest neighbour query
 - Insertion, deletion and update queries for moodboards and during moodboard editing.
 
-use lucidchart
-
-c) Create test data to enter into your backend - manually enter some test data to check the structure works and then work on collecting/creating more data to import in Excel or manually.
-this will take very long :(
-
+### SQL Queries
 d) Write a series (5+) of SQL queries to combine and test your data is displaying correctly from your tables - read through SQL Tutorial
 for some ideas - PS. SELECT * FROM "Table" is only a very, very basic Query - create several from across tables showing joins and MEANINGFUL data that a user might find useful.
 
-Client: developer presents their database structure and queries to you. Discuss whether you see any problems coming from the table
-setup, the test data or whether the queries are useful or not for front end display (does it make sense and would it work as intended?) Does the developer understand what is needed for back-end to be constructed properly or not? Are you confident they have designed and created a ROBUST backend for your web app?
+Query 1. 
+Query 2. 
+Query 3. 
+Query 4. 
+Query 5. 
+Query 6. 
