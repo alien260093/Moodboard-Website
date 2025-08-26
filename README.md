@@ -144,7 +144,6 @@ Potential data query types needed:
 - Insertion, deletion and update queries for moodboards and during moodboard editing.
 
 ### SQL Queries
- Remove existing or deleted status from database structure
 Here is the Excel databse: https://schoolsnsw-my.sharepoint.com/:x:/g/personal/tianna_liu1_education_nsw_gov_au/Eb0u3LLtonROve5Bz90Ep9cB6LIx-s8JwNC1Z7PSVi_aJw?e=QALNk7
 
 
