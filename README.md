@@ -147,11 +147,15 @@ Potential data query types needed:
  Remove existing or deleted status from database structure
 Here is the Excel databse: https://schoolsnsw-my.sharepoint.com/:x:/g/personal/tianna_liu1_education_nsw_gov_au/Eb0u3LLtonROve5Bz90Ep9cB6LIx-s8JwNC1Z7PSVi_aJw?e=QALNk7
 
-d) Write a series (5+) of SQL queries to combine and test your data is displaying correctly from your tables - read through SQL Tutorial
-for some ideas - PS. SELECT * FROM "Table" is only a very, very basic Query - create several from across tables showing joins and MEANINGFUL data that a user might find useful.
 
 Query 1. SELECT Username, Email FROM Users;
+
 Query 2. SELECT Status FROM Collaborators;
+
 Query 3. SELECT COUNT(DISTINCT Level of permission) FROM Collaborators;
+
 Query 4. SELECT * FROM Users/ ORDER BY Username;
-Query 5. SELECT * FROM Moodboards/ WHERE NOT Recent = 'TRUE';
+
+Query 5. SELECT * FROM Moodboards/ WHERE Recent = 'TRUE';
+
+Query 6. SELECT * FROM Users/ WHERE User ID >90;
