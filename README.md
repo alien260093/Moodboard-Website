@@ -150,9 +150,8 @@ Here is the Excel databse: https://schoolsnsw-my.sharepoint.com/:x:/g/personal/t
 d) Write a series (5+) of SQL queries to combine and test your data is displaying correctly from your tables - read through SQL Tutorial
 for some ideas - PS. SELECT * FROM "Table" is only a very, very basic Query - create several from across tables showing joins and MEANINGFUL data that a user might find useful.
 
-Query 1. 
-Query 2. 
-Query 3. 
-Query 4. 
-Query 5. 
-Query 6. 
+Query 1. SELECT Username, Email FROM Users;
+Query 2. SELECT Status FROM Collaborators;
+Query 3. SELECT COUNT(DISTINCT Level of permission) FROM Collaborators;
+Query 4. SELECT * FROM Users/ ORDER BY Username;
+Query 5. SELECT * FROM Moodboards/ WHERE NOT Recent = 'TRUE';
