@@ -158,3 +158,12 @@ Query 4. SELECT * FROM Users/ ORDER BY Username;
 Query 5. SELECT * FROM Moodboards/ WHERE Recent = 'TRUE';
 
 Query 6. SELECT * FROM Users/ WHERE User ID >90;
+
+## Creating and Styling Webpages (HTML and CSS)
+2/9/2025 the setup has been completed, currently working on designing the webpages.
+Webpage 1 - About Vision Page
+Webpage 2 - Login page
+Webpage 3 - Homepage
+The page look and the buttons linking the pages together will be completed.
+
+Client: Iis it fulfilling the main function you desired - i.e. connecting with your "people". Does it look good? Is it organised to be pleasing to the eye? Is it something you like? What hasn't been done yet? what can be improved? and so on.......
