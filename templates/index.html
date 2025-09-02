@@ -1,5 +1,3 @@
-touch index.html
-code index.html
 {% extends 'layout.html' %}
 {% block content %}
 <div class="container">
@@ -19,9 +17,3 @@ code index.html
   {% endfor %}
 </div>
 {% endblock %}
-{% include 'partials/menu.html' %}
-
-def index():
-   data = dbHandler.listExtension()
-   return render_template('/index.html', content=data)
-   
