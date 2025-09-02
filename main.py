@@ -11,9 +11,14 @@ def index():
     data = dbHandler.listExtension()
     return render_template('index.html', content=data)
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/add.html', methods=['GET', 'POST'])
 def login():
     return render_template('add.html')
+
+@app.route('/about.html', methods=['GET', 'POST'])
+def homepage():
+    return render_template('about.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

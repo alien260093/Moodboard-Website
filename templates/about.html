@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="title">moodboards</div>
+<div class="search-bar">
+    <form method="GET" action="">
+        <input type="text" name="search" placeholder="Search moodboards...">
+    </form>
+</div>
+
+<div class="category">
+    <div class="category-label">Favourites</div>
+    <div class="moodboard-list">
+        {% for moodboard in favourites %}
+        <div class="moodboard-entry">
+            <div class="moodboard-title">{{ moodboard.title }}</div>
+            <div class="moodboard-meta">{{ moodboard.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="category">
+    <div class="category-label">Recently Opened</div>
+    <div class="moodboard-list">
+        {% for moodboard in recently_opened %}
+        <div class="moodboard-entry">
+            <div class="moodboard-title">{{ moodboard.title }}</div>
+            <div class="moodboard-meta">{{ moodboard.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
