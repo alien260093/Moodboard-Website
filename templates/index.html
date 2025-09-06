@@ -1,19 +1,176 @@
-{% extends 'layout.html' %}
-{% block content %}
-<div class="container">
-  {% for row in content %}
-    <div class="card">
-      <img
-        class="card-image"
-        src="{{ row[4] }}"
-        alt="Product image for the {{ row[1] }} VSCode extension."
-      />
-      <h1 class="card-name">{{ row[1] }}</h1>
-      <p class="card-about">{{ row[3] }}</p>
-      <a class="card-link" href="{{ row[2] }}">
-        <button class="btn">Read More</button>
-      </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Moodboard App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      width: 100vw;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 40px 80px;
+    }
+
+    /* Left Section */
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .dropdown-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .dropdown-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+      width: 220px;
+    }
+
+    .dropdown-content p {
+      margin: 8px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .left h1 {
+      font-size: 42px;
+      max-width: 400px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .highlight {
+      color: #B042E5;
+    }
+
+    .login-btn {
+      background: #B042E5;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: #9333b4;
+    }
+
+    /* Right Section with Image */
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-image {
+      max-width: 80%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Responsiveness */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .left {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .left h1 {
+        max-width: 100%;
+      }
+
+      .right {
+        margin-top: 20px;
+      }
+
+      .main-image {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Content -->
+    <div class="left">
+      <div class="dropdown-container">
+        <button class="dropdown-btn" onclick="toggleDropdown()">How people use Vision ▼</button>
+        <div class="dropdown-content" id="dropdown">
+          <p>🎨 Create moodboards</p>
+          <p>📚 Organize inspiration</p>
+          <p>🚀 Plan creative projects</p>
+          <p>💡 Brainstorm ideas</p>
+        </div>
+      </div>
+
+      <h1>The moodboard app you’ve been <span class="highlight">looking for</span></h1>
+      <a href="add.html" class="login-btn">LOG IN WITH GOOGLE</a>
     </div>
-  {% endfor %}
-</div>
-{% endblock %}
+
+    <!-- Right Section with Single Image -->
+    <div class="right">
+      <img src="your-image.png" alt="Vision Moodboard Illustration" class="main-image">
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
