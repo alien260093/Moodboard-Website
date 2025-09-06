@@ -2,76 +2,57 @@
 {% block content %}
 <header>Your Boards</header>
 <div class="container">
-    <input type="text" class="search-bar" placeholder="Search Moodboard Names...                  " id="searchInput">
+    <input type="text" class="search-bar" placeholder="Search Moodboard Names..." id="searchInput">
+
     <div class="section" id="recentlyOpenedSection">
         <div class="section-title">Recently Opened</div>
         <div class="moodboard-list" id="recentlyOpenedList">
-            {% for moodboard in recently_opened %}
-            <div class="moodboard-card">
-                <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
-                <div class="moodboard-name">{{ moodboard[1] }}</div>
-            </div>
-            {% endfor %}
+            {% if recently_opened %}
+                {% for moodboard in recently_opened %}
+                    <div class="moodboard-card">
+                        <img class="moodboard-image" src="{{ moodboard.image }}" alt="{{ moodboard.name }}">
+                        <div class="moodboard-name">{{ moodboard.name }}</div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No recently opened boards.</p>
+            {% endif %}
         </div>
     </div>
 
     <div class="section" id="favouritesSection">
         <div class="section-title">Favourites</div>
         <div class="moodboard-list" id="favouritesList">
-            {% for moodboard in favourites %}
-            <div class="moodboard-card">
-                <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
-                <div class="moodboard-name">{{ moodboard[1] }}</div>
-            </div>
-            {% endfor %}
+            {% if favourites %}
+                {% for moodboard in favourites %}
+                    <div class="moodboard-card">
+                        <img class="moodboard-image" src="{{ moodboard.image }}" alt="{{ moodboard.name }}">
+                        <div class="moodboard-name">{{ moodboard.name }}</div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No favourite boards.</p>
+            {% endif %}
         </div>
     </div>
 
     <div class="section" id="moodboardsSection">
         <div class="section-title">Moodboards</div>
         <div class="moodboard-list" id="moodboardsList">
-            {% for moodboard in moodboards %}
-            <div class="moodboard-card">
-                <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
-                <div class="moodboard-name">{{ moodboard[1] }}</div>
-            </div>
-            {% endfor %}
+            {% if moodboards %}
+                {% for moodboard in moodboards %}
+                    <div class="moodboard-card">
+                        <img class="moodboard-image" src="{{ moodboard.image }}" alt="{{ moodboard.name }}">
+                        <div class="moodboard-name">{{ moodboard.name }}</div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No other boards.</p>
+            {% endif %}
         </div>
     </div>
 </div>
+
 <button class="create-btn">Create New Board</button>
 
-
-{% if recently_opened %}
-    {% for moodboard in recently_opened %}
-        <div class="moodboard-card">
-            <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
-            <div class="moodboard-name">{{ moodboard[1] }}</div>
-        </div>
-    {% endfor %}
-{% else %}
-    <p>No recently opened boards.</p>
-{% endif %}
-
-{% if favourites %}
-    {% for moodboard in recently_opened %}
-        <div class="moodboard-card">
-            <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
-            <div class="moodboard-name">{{ moodboard[1] }}</div>
-        </div>
-    {% endfor %}
-{% else %}
-    <p>No favourite boards.</p>
-{% endif %}
-
-{% if moo %}
-    {% for moodboard in recently_opened %}
-        <div class="moodboard-card">
-            <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
-            <div class="moodboard-name">{{ moodboard[1] }}</div>
-        </div>
-    {% endfor %}
-{% else %}
-    <p>No other boards.</p>
-{% endif %}
 {% endblock %}
