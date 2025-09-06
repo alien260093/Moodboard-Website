@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 
+/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,18 +8,36 @@
 }
 
 body {
-  background: #fdfdfd;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
+  background: #f7f7f7;
+  color: #222;
 }
 
+/* ===== Layout ===== */
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: center;
 }
 
+header {
+  background: #333;
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ===== Navigation ===== */
 nav {
   display: flex;
   justify-content: space-between;
@@ -32,16 +51,14 @@ nav img {
 nav ul {
   list-style: none;
   display: flex;
-}
-
-nav li {
-  margin-right: 1rem;
+  gap: 1rem;
 }
 
 nav ul li a {
-  text-decoration-line: none;
+  text-decoration: none;
   text-transform: uppercase;
   color: #393b45;
+  transition: color 0.2s;
 }
 
 nav ul li a:hover {
@@ -53,63 +70,92 @@ nav h1 {
   margin-bottom: 0.5rem;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 1rem 0;
+/* ===== Search Bar ===== */
+.search-bar {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 17rem;
+/* ===== Sections ===== */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* ===== Unified Card Design ===== */
+.card,
+.moodboard-card {
   background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
   margin: auto;
   overflow: hidden;
+  transition: box-shadow 0.2s;
+  text-align: center;
 }
 
-.card-image {
+.card:hover,
+.moodboard-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+}
+
+.card-image,
+.moodboard-image {
   width: 100%;
-  height: 15rem;
+  height: 120px;
   object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  background: #e0e0e0;
 }
 
-.card-name {
+.card-name,
+.moodboard-name {
+  font-size: 1rem;
+  font-weight: 600;
   color: #222;
-  font-weight: 700;
-  text-transform: capitalize;
-  font-size: 1.1rem;
   margin-top: 0.5rem;
+  text-transform: capitalize;
 }
 
 .card-about {
+  font-size: 0.9rem;
+  color: #555;
   text-overflow: ellipsis;
-  width: 15rem;
+  width: 90%;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 1rem;
 }
 
+/* ===== Button (for cards or global use) ===== */
 .btn {
   border: none;
-  background: none;
+  background: hsl(110, 21%, 93%);
+  color: hsl(141, 100%, 22%);
   border-radius: 5px;
   box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.1);
   cursor: pointer;
-  font-size: 1.25rem;
-  margin: 0 1rem;
-  padding: 0.25rem 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
   transition: all 0.25s ease-in-out;
-  background: hsl(110, 21%, 93%);
-  color: hsl(141, 100%, 22%);
-  margin-bottom: 1rem;
 }
 
 .btn:focus,
@@ -118,108 +164,44 @@ nav h1 {
   background: hsl(111, 21%, 86%);
 }
 
-.about-container {
-  font-size: 1.25rem;
-  margin-top: 2rem;
-  text-align: justify;
-  text-justify: inter-word;
+/* ===== Lists for Cards ===== */
+.moodboard-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background: #f7f7f7;
-}
-header {
-    background: #333;
-    color: #fff;
-    padding: 2rem 1rem 1rem 1rem;
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: 1px;
-}
-.container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-.search-bar {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-}
-.section {
-    margin-bottom: 2.5rem;
-}
-.section-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #444;
-}
-.moodboard-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-.moodboard-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    width: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    transition: box-shadow 0.2s;
-}
-.moodboard-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-}
-.moodboard-image {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 0.75rem;
-    background: #e0e0e0;
-}
-.moodboard-name {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #222;
-    text-align: center;
-    margin-top: 0.5rem;
-}
+/* ===== Create Button (Floating Action) ===== */
 .create-btn {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    background: #4f8cff;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    box-shadow: 0 4px 16px rgba(79,140,255,0.18);
-    cursor: pointer;
-    z-index: 1000;
-    transition: background 0.2s;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s;
 }
+
 .create-btn:hover {
-    background: #2563eb;
+  background: #2563eb;
 }
+
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
-    .moodboard-list {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .moodboard-card {
-        width: 100%;
-    }
+  .moodboard-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card,
+  .moodboard-card {
+    width: 100%;
+  }
 }

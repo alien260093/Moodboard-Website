@@ -5,11 +5,12 @@ import database_manager as dbHandler
 
 app = Flask(__name__)
 
-@app.route('/index.html', methods=['GET'])
 @app.route('/', methods=['POST', 'GET'])
+@app.route('/index.html', methods=['GET'])
 def index():
     data = dbHandler.listExtension()
     return render_template('index.html', content=data)
+
 
 @app.route('/add.html', methods=['GET', 'POST'])
 def login():

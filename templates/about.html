@@ -2,7 +2,7 @@
 {% block content %}
 <header>Your Boards</header>
 <div class="container">
-    <input type="text" class="search-bar" placeholder="Search Moodboard Names..." id="searchInput">
+    <input type="text" class="search-bar" placeholder="Search Moodboard Names...                  " id="searchInput">
     <div class="section" id="recentlyOpenedSection">
         <div class="section-title">Recently Opened</div>
         <div class="moodboard-list" id="recentlyOpenedList">
@@ -40,4 +40,38 @@
     </div>
 </div>
 <button class="create-btn">Create New Board</button>
+
+
+{% if recently_opened %}
+    {% for moodboard in recently_opened %}
+        <div class="moodboard-card">
+            <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
+            <div class="moodboard-name">{{ moodboard[1] }}</div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No recently opened boards.</p>
+{% endif %}
+
+{% if favourites %}
+    {% for moodboard in recently_opened %}
+        <div class="moodboard-card">
+            <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
+            <div class="moodboard-name">{{ moodboard[1] }}</div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No favourite boards.</p>
+{% endif %}
+
+{% if moo %}
+    {% for moodboard in recently_opened %}
+        <div class="moodboard-card">
+            <img class="moodboard-image" src="{{ moodboard[3] }}" alt="{{ moodboard[1] }}">
+            <div class="moodboard-name">{{ moodboard[1] }}</div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No other boards.</p>
+{% endif %}
 {% endblock %}
