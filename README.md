@@ -69,7 +69,7 @@ Since the algorithm is simply to check whether the inputted data is correct and 
 
 ### Implement and Testing of the login function
 I'm going to implement the login algorithm in Spyder - I've attatched a copy of the code and how it runs(Login algorithm code).
-In regards to how the algorithm should operate, I've attatched a flowchart of the basic process(login algorithm flowchart) and a flowchart of how the code runs(Flowchart for Login Code - upload friday).
+In regards to how the algorithm should operate, I've attatched a flowchart of the basic process(login algorithm flowchart)).
 
 
 ### Test Cases
@@ -103,3 +103,67 @@ Priority: High
 
 does this algorithm ALIGN WITH THE STATED PURPOSE OF THE APP and meet the client needs?
 Yes, the purpose of the app is to allow users to collaborate together on an artistic project using moodboard. Having this google login functions allows users to protect their privacy, save their moodboard projects and share these projects with specific individuals. This login enables users to collaborate together on the same project at the same time.
+
+-sync to cloud function
+
+## Setting up SQL
+SQL has been successfully set up 21/8/2025
+
+### Creating my own database structure 
+- consider table names, data headings, primary keys, foreign keys, types of data stored etc.
+Considerations for my data:
+what data do you want stored during the use of your app?
+the different google users
+any moodboard projects
+any and all imported assets
+comments/feedback database
+collaborators database
+tags databas(favourite or not favourite)
+
+what data you want displayed on your front end?
+Moodboard project names, pictures and tags
+Images and names of imported assets
+The profiles and external information of users
+The profiles of collaborators
+Comments: The dates they were made and the content of the comment
+
+To understand and explain what data is related to each other, I must use arrows and explain the flow. 
+How the data will be used and interact with other data in the backend.
+
+what data types should for elements be in your database (text, numeric, image etc)
+Integer
+string
+boolean
+datetime
+content(assets can be any type: text, images, links and videos)
+
+what queries might you need to write (between and across tables) allowing for good information storage and retrieval
+Potential data query types needed:
+- exact match(search bar), nearest neighbour(recent moodboards)
+- neraest neighbour query
+- Insertion, deletion and update queries for moodboards and during moodboard editing.
+
+### SQL Queries
+Here is the Excel databse: https://schoolsnsw-my.sharepoint.com/:x:/g/personal/tianna_liu1_education_nsw_gov_au/Eb0u3LLtonROve5Bz90Ep9cB6LIx-s8JwNC1Z7PSVi_aJw?e=QALNk7
+
+
+Query 1. SELECT Username, Email FROM Users;
+
+Query 2. SELECT Status FROM Collaborators;
+
+Query 3. SELECT COUNT(DISTINCT Level of permission) FROM Collaborators;
+
+Query 4. SELECT * FROM Users/ ORDER BY Username;
+
+Query 5. SELECT * FROM Moodboards/ WHERE Recent = 'TRUE';
+
+Query 6. SELECT * FROM Users/ WHERE User ID >90;
+
+## Creating and Styling Webpages (HTML and CSS)
+2/9/2025 the setup has been completed, currently working on designing the webpages.
+Webpage 1 - About Vision Page
+Webpage 2 - Login page
+Webpage 3 - Homepage
+The page look and the buttons linking the pages together will be completed.
+
+Client: Iis it fulfilling the main function you desired - i.e. connecting with your "people". Does it look good? Is it organised to be pleasing to the eye? Is it something you like? What hasn't been done yet? what can be improved? and so on.......
