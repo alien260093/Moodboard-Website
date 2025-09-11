@@ -1,8 +1,9 @@
 <nav>
   <img src="{{ url_for('static', filename='images/logo.png') }}" alt="VSCode Extensions site logo." />
+  <link rel="stylesheet" href="css/style.css"> <!-- External stylesheet -->
   <h1>ignite your Vision</h1>
   <ul class="topnav">
-    <li><a href="{{ url_for('index') }}">About us</a></li>
+    <li><a href="{{ url_for('index') }}">Welcome</a></li>
     <li><a href="{{ url_for('login') }}">Login</a></li>
     <li><a href="{{ url_for('homepage') }}">Homepage</a></li>
   </ul>
