@@ -174,3 +174,4 @@ I'll also add a mockup moodboard editing page.
 So far the design is fulfilling the desired function as it is simple, unique and eye-catching, attracting creative users to the platform. In the introduction page the "how Vision is used" dropdown menu also gives users brief idea on what Vision is used for--but the description could be more detailed.
 The Login page functions smoothly with nice aesthetics and the homepage(in-progress) has a clear layout, allowing for easy navigation. 
 Since the web homepage design hasn't been finalised yet, it's a good opportunity to recieve client feedback based on the last two pages, and incorporate it into the homepage design.
+find how the website looks so far in folder "Website setup"
