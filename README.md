@@ -164,6 +164,13 @@ Query 6. SELECT * FROM Users/ WHERE User ID >90;
 Webpage 1 - About Vision Page
 Webpage 2 - Login page
 Webpage 3 - Homepage
-The page look and the buttons linking the pages together will be completed.
 
-Client: Iis it fulfilling the main function you desired - i.e. connecting with your "people". Does it look good? Is it organised to be pleasing to the eye? Is it something you like? What hasn't been done yet? what can be improved? and so on.......
+11/9/2025
+Introducing Vision and Login page has been completed.
+only Vision homepage design needs to be finished + debug some errors with linking database as data source.
+the terms and conditions page hasn't been linked(maybe soon)
+I'll also add a mockup moodboard editing page.
+
+So far the design is fulfilling the desired function as it is simple, unique and eye-catching, attracting creative users to the platform. In the introduction page the "how Vision is used" dropdown menu also gives users brief idea on what Vision is used for--but the description could be more detailed.
+The Login page functions smoothly with nice aesthetics and the homepage(in-progress) has a clear layout, allowing for easy navigation. 
+Since the web homepage design hasn't been finalised yet, it's a good opportunity to recieve client feedback based on the last two pages, and incorporate it into the homepage design.
