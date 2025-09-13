@@ -1,10 +1,38 @@
 <nav>
   <img src="{{ url_for('static', filename='images/logo.png') }}" alt="VSCode Extensions site logo." />
   <link rel="stylesheet" href="css/style.css"> <!-- External stylesheet -->
-  <h1>ignite your Vision</h1>
+  <h1>Vision</h1>
   <ul class="topnav">
     <li><a href="{{ url_for('index') }}">Welcome</a></li>
     <li><a href="{{ url_for('login') }}">Login</a></li>
     <li><a href="{{ url_for('homepage') }}">Homepage</a></li>
   </ul>
 </nav>
+
+<style>
+/* === Navigation Bar === */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcfafa;
+  padding: 10px 20px;
+  max-width: 1000px;
+  h1 {
+  font-family:  Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 1.5rem;
+  align-items: center;
+}
+  img {
+    height: 50px;
+  }
+}
+
+li {
+  display: inline;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  font-family:  Helvetica, Arial, sans-serif;
+}
+</style>

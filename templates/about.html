@@ -56,22 +56,33 @@
 <button class="create-btn">Create New Board</button>
 
 <style>
+
 /* === Global Styles === */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+    background-image: url("static/images/paper tex.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* === Page Header === */
 header {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin: 20px 0;
+  color: #e4e3df; /* White text stands out on images */
+  padding: 40px; /* Increase padding to show the image */
+  background-image: url('/static/images/starry.jpg'); /* Change this path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; /* Optional */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 
 /* === Main Container === */
 .container {
@@ -84,17 +95,19 @@ header {
 .search-bar {
   display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 10px 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 1rem;
+  height: 40px;
+
 }
 
 /* === Section Titles === */
 .section-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 30px 0 10px;
   text-align: center;
@@ -104,19 +117,25 @@ header {
 .moodboard-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 20px;
+  width: 100%;
 }
+
+
 
 /* === Individual Moodboard Cards === */
 .moodboard-card {
+  flex: 0 0 180px; /* Prevent growing/shrinking */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 180px;
   text-align: center;
   transition: box-shadow 0.3s;
 }
+
 
 .moodboard-card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -124,7 +143,7 @@ header {
 
 /* === Moodboard Image === */
 .moodboard-image {
-  width: 100%;
+  width: 110%;
   height: 120px;
   object-fit: cover;
   display: block;
@@ -142,16 +161,20 @@ header {
   display: block;
   margin: 30px auto 0;
   padding: 10px 20px;
-  background: #007bff;
+  background: #d76be0;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+  height:60px;
+  width: 200px;
+  font-family: Helvetica, Arial, sans-serif;
+
 }
 
 .create-btn:hover {
-  background: #0056b3;
+  background: #b0b4b8;
 }
 
 </style>

@@ -22,6 +22,10 @@ def homepage():
     # Mock data to simulate DB response
     all_moodboards = [
         (1, "Summer Vibes", 1, 0, "Extra data", "/static/images/summer.jpg"),
+        (1, "Summer Vibes", 1, 0, "Extra data", "/static/images/summer.jpg"),
+        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
+        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
+        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
         (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
         (3, "Spring Colors", 0, 0, "Extra data", "/static/images/spring.jpg")
     ]
