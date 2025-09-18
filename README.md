@@ -186,7 +186,7 @@ New moodboard creation process:
 2. screen pops up where users input name of moodboard and any tags
 3. user returns to homesscreen(where they can see the moodboard they just created)
 
-the moodboard the user creates will pop up as an record in the moodboards databse. Unfilled fields(ID, image, etc.) will be filled automatically either randomly or according to a pattern.
+the moodboard the user creates will pop up as an record in the moodboards databse. Unfilled fields(ID, user ID, Moodboard picture, datetime created, datetime last edited) will be filled automatically either randomly or according to a pattern.
 This code is slightly complex so I plan to work on it over the weekend.
 
 
