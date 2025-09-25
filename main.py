@@ -58,12 +58,6 @@ def homepage():
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
 
-
-@app.route('/test')
-def test():
-    print("Test route is running!")
-    return "Test route works!"
-
 @app.route('/new.html', methods=['GET', 'POST'])
 def new():
     return render_template('new.html')
