@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+
 {% block content %}
 <header>Your Boards</header>
 <div class="container">
@@ -53,24 +54,71 @@
     </div>
 </div>
 
-<!-- Popup Trigger -->
-<button class="open-button" onclick="openForm()">Open Form</button>
+<!-- Button to open the form -->
+<button class="open-button" onclick="openForm()">Create Moodboard</button>
 
-<!-- Popup Form -->
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+<!-- Popup form -->
+<div class="form-popup" id="popupForm">
+  <div class="form-container">
+    <h3>Create New Moodboard</h3>
+    <input type="text" id="moodboardName" placeholder="Moodboard Name" required>
+    <label for="favorite">Favorite</label>
+    <input type="checkbox" id="favorite">
+<div class="btn-group">
+    <button class="btn" onclick="confirmMoodboard()">Confirm</button>
+    <button class="btn cancel" onclick="closeForm()">Cancel</button>
+  </div>
 </div>
+</div>
+
+
+<script>
+// Function to open the popup form
+function openForm() {
+  // Get the popup form element
+  const form = document.getElementById("popupForm");
+  
+  // Check if form is already visible
+  if (form.style.display === "block") {
+    // Hide it if it is already open
+    form.style.display = "none";
+  } else {
+    // Otherwise, show the form
+    form.style.display = "block";
+  }
+}
+
+// Function to close the popup form
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
+
+
+// Function to confirm the creation of a new moodboard
+function confirmMoodboard() {
+  var name = document.getElementById("moodboardName").value;
+  var isFavorite = document.getElementById("favorite").checked;
+
+  // Check if the name is provided
+  if (!name) {
+    alert("Please enter a moodboard name.");
+    return;
+  }
+
+  // Here you would send the data to the server or create a new database entry
+  // For now, we're just logging it
+  console.log("Creating new moodboard: ", name, " Favorite: ", isFavorite);
+
+  // Example: you could make an API call to create the new entry in your database
+
+  // Close the form after submitting
+  closeForm();
+
+  // Optionally, update the UI with the new moodboard (could be done with AJAX or refreshing the page)
+  alert("Moodboard created successfully!");
+}
+
+</script>
 
 <style>
 /* === Global Styles === */
@@ -183,7 +231,6 @@ header {
 }
 
 .form-popup {
-  display: none;
   position: fixed;
   bottom: 0;
   right: 15px;
@@ -193,23 +240,31 @@ header {
 }
 
 .form-container {
-  max-width: 300px;
+  width: 350px;
+  height: 250px;
   padding: 10px;
 }
 
-.form-container input[type=text], 
-.form-container input[type=password] {
+.form-container input[type=text] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  align-items: center;
+
 }
 
-.form-container input[type=text]:focus, 
-.form-container input[type=password]:focus {
+.form-container input[type=text]:focus {
   background-color: #ddd;
   outline: none;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .form-container .btn {
@@ -219,27 +274,53 @@ header {
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
   opacity: 0.8;
+  max-width: 120px;
+  display: inline-block;
+  justify-content: flex-end;
+  text-align: center;
 }
 
 .form-container .cancel {
   background-color: red;
+  max-width: 120px;
+  display: inline-block;
+  justify-content: flex-end;
+  text-align: center;
+
 }
 
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+
+}
+
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
 }
 </style>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
 
 {% endblock %}
