@@ -1,4 +1,5 @@
 import random
+import sqlite3
 import database_manager as dbHandler
 from flask import Flask, render_template, request, redirect, url_for
 
