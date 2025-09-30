@@ -38,7 +38,8 @@
 </div>
 
 <div class="section" id="moodboardsSection">
-    <div class="section-title">Moodboards</div>
+    <div class="section-title">Moodboards
+    </div>
     <div class="moodboard-list" id="moodboardsList">
         {% if moodboards %}
             {% for moodboard in moodboards %}
@@ -59,21 +60,22 @@
 
 <!-- Popup form -->
 <div class="form-popup" id="popupForm">
-  <div class="form-container">
+  <form class="form-container" method="POST" action="/new.html">
     <h3>Create New Moodboard</h3>
-    <input type="text" id="moodboardName" placeholder="Moodboard Name" required>
-  
-<div class="form-check">
-  <label for="favorite">Favorite</label>
-  <input type="checkbox" id="favorite">
+    <input type="text" name="mname" placeholder="Moodboard Name" required>
+
+    <div class="form-check">
+      <label for="favorite">Favorite</label>
+      <input type="checkbox" name="favorite" id="favorite">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn">Confirm</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+    </div>
+  </form>
 </div>
 
-<div class="btn-group">
-    <button class="btn" onclick="confirmMoodboard()">Confirm</button>
-    <button class="btn cancel" onclick="closeForm()">Cancel</button>
-  </div>
-</div>
-</div>
 
 
 <script>
@@ -133,8 +135,7 @@ body {
   box-sizing: border-box;
   background-image: url("static/images/paper tex.jpg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 /* === Page Header === */

@@ -90,14 +90,14 @@ span.psw {
 <body>
 
 <h2>Create Moodboard</h2>
-<form action="/action_page.php" method="post">
+<form action="/new.html" method="post">
   <div class="container">
-    <label for="mname"><b>Moodboad Name</b></label>
-    <input type="text" placeholder="Enter Moodboard name" name="nmame" required>
+    <label for="mname"><b>Moodboard Name</b></label>
+    <input type="text" placeholder="Enter Moodboard name" name="mname" required>
 
     <button type="submit">Create</button>
     <label>
-      <input type="checkbox" checked="checked" name="favorite" id="favorite"> Favorite
+      <input type="checkbox" name="favorite" id="favorite"> Favorite
     </label>
   </div>
 
@@ -119,6 +119,8 @@ span.psw {
             });
         }
 
+
+
         // Checkbox Handling
         const checkbox = document.getElementById('favorite');
         if (checkbox) {
@@ -131,9 +133,7 @@ span.psw {
             });
         }
     });
+
+
 </script>
-
-
-
-
 </html>

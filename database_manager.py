@@ -1,3 +1,4 @@
+from flask import Flask, render_template, request, redirect
 import sqlite3 as sql
 
 
@@ -22,7 +23,7 @@ def add_moodboard(name, favourite, recently_opened, image):
     cursor = conn.cursor()
     cursor.execute(
         "INSERT INTO moodboards (Moodboard_name, favourite, recent, Moodboard_picture) VALUES (?, ?, ?, ?)",
-        (name, favourite, recently_opened, image)
+        (name, bool(favourite), bool(recently_opened), image)
     )
     conn.commit()
     conn.close()
