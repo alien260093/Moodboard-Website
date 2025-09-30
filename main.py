@@ -8,8 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 @app.route('/index.html', methods=['GET'])
 def index():
-    data = dbHandler.listExtension()
-    return render_template('index.html', content=data)
+    return render_template('index.html', content=[])
 
 
 @app.route('/login.html', methods=['GET', 'POST'])
@@ -21,36 +20,30 @@ def login():
 def new():
     return render_template('new.html')
 
-@app.route('/about.html', methods=['GET', 'POST'])
+@app.route('/about.html', methods=['GET'])
 def homepage():
-    # Mock data to simulate DB response
-    all_moodboards = [
-        (1, "Summer Vibes", 1, 0, "Extra data", "/static/images/summer.jpg"),
-        (1, "Summer Vibes", 1, 0, "Extra data", "/static/images/summer.jpg"),
-        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
-        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
-        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
-        (2, "Winter Mood", 0, 1, "Extra data", "/static/images/winter.jpg"),
-        (3, "Spring Colors", 0, 0, "Extra data", "/static/images/spring.jpg")
-    ]
+    rows = dbHandler.list_moodboards()
+    print("Rows:", rows)
+    for r in rows:
+        print("Row length:", len(r), "Row:", r)
 
-    # Convert to dictionaries (like before)
     moodboards_dicts = [
-        {
-            "id": m[0],
-            "name": m[1],
-            "favourite": m[2],
-            "recently_opened": m[3],
-            "extra": m[4],
-            "image": m[5]
-        }
-        for m in all_moodboards
-    ]
-
-    # Filter into categories
-    recently_opened = [m for m in moodboards_dicts if m["recently_opened"] == 1]
-    favourites = [m for m in moodboards_dicts if m["favourite"] == 1]
-    others = [m for m in moodboards_dicts if not m["favourite"] and not m["recently_opened"]]
+    {
+        "moodboard_name": m[0],
+        "favourite": (str(m[1]).upper() == "TRUE"),
+        "recent": (str(m[2]).upper() == "TRUE"),
+        "moodboard_picture": m[3]
+    }
+    for m in rows
+]
+    
+    recently_opened = [m for m in moodboards_dicts if m["recent"]]
+    favourites = [m for m in moodboards_dicts if m["favourite"]]
+    others = [m for m in moodboards_dicts if not m["favourite"] and not m["recent"]]
+    
+    print("Recently opened:", recently_opened)
+    print("Favourites:", favourites)
+    print("Others:", others)
 
     return render_template(
         'about.html',
@@ -58,7 +51,6 @@ def homepage():
         favourites=favourites,
         moodboards=others
     )
-
 
 
 if __name__ == '__main__':

@@ -1,14 +1,28 @@
 import sqlite3 as sql
 
-def listExtension():
-    con = sql.connect("Database/data_source.db")
-    cur = con.cursor()
 
+
+DB_path = "Database/data_source.db"
+
+def get_connection():
+    con = sql.connect(DB_path)
+    return con
+
+def list_moodboards():
+    conn = get_connection()
+    cursor = conn.cursor()
     # Run query
-    data = cur.execute('SELECT * FROM Moodboards').fetchall()
+    cursor.execute("SELECT Moodboard_name, favourite, recent, Moodboard_picture FROM moodboards")
+    rows = cursor.fetchall()     
+    conn.close()
+    return rows
 
-    # Print raw DB data for debugging
-    print("DB query results:", data)
-
-    con.close()
-    return data
+def add_moodboard(name, favourite, recently_opened, image):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        "INSERT INTO moodboards (Moodboard_name, favourite, recent, Moodboard_picture) VALUES (?, ?, ?, ?)",
+        (name, favourite, recently_opened, image)
+    )
+    conn.commit()
+    conn.close()

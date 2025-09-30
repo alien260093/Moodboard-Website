@@ -6,52 +6,52 @@
     <input type="text" class="search-bar" placeholder="Search Moodboard Names..." id="searchInput">
 
     <div class="section" id="recentlyOpenedSection">
-        <div class="section-title">Recently Opened</div>
-        <div class="moodboard-list" id="recentlyOpenedList">
-            {% if recently_opened %}
-                {% for moodboard in recently_opened %}
-                    <div class="moodboard-card">
-                        <img class="moodboard-image" src="{{ moodboard.image }}" alt="{{ moodboard.name }}">
-                        <div class="moodboard-name">{{ moodboard.name }}</div>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <p>No recently opened boards.</p>
-            {% endif %}
-        </div>
+    <div class="section-title">Recently Opened</div>
+    <div class="moodboard-list" id="recentlyOpenedList">
+        {% if recently_opened %}
+            {% for moodboard in recently_opened %}
+                <div class="moodboard-card">
+                    <img class="moodboard-image" src="{{ moodboard['moodboard_picture'] }}" alt="{{ moodboard['moodboard_name'] }}">
+                    <div class="moodboard-name">{{ moodboard['moodboard_name'] }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No recently opened boards.</p>
+        {% endif %}
     </div>
+</div>
 
-    <div class="section" id="favouritesSection">
-        <div class="section-title">Favourites</div>
-        <div class="moodboard-list" id="favouritesList">
-            {% if favourites %}
-                {% for moodboard in favourites %}
-                    <div class="moodboard-card">
-                        <img class="moodboard-image" src="{{ moodboard.image }}" alt="{{ moodboard.name }}">
-                        <div class="moodboard-name">{{ moodboard.name }}</div>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <p>No favourite boards.</p>
-            {% endif %}
-        </div>
+<div class="section" id="favouritesSection">
+    <div class="section-title">Favourites</div>
+    <div class="moodboard-list" id="favouritesList">
+        {% if favourites %}
+            {% for moodboard in favourites %}
+                <div class="moodboard-card">
+                    <img class="moodboard-image" src="{{ moodboard['moodboard_picture'] }}" alt="{{ moodboard['moodboard_name'] }}">
+                    <div class="moodboard-name">{{ moodboard['moodboard_name'] }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No favourite boards.</p>
+        {% endif %}
     </div>
+</div>
 
-    <div class="section" id="moodboardsSection">
-        <div class="section-title">Moodboards</div>
-        <div class="moodboard-list" id="moodboardsList">
-            {% if moodboards %}
-                {% for moodboard in moodboards %}
-                    <div class="moodboard-card">
-                        <img class="moodboard-image" src="{{ moodboard.image }}" alt="{{ moodboard.name }}">
-                        <div class="moodboard-name">{{ moodboard.name }}</div>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <p>No other boards.</p>
-            {% endif %}
-        </div>
+<div class="section" id="moodboardsSection">
+    <div class="section-title">Moodboards</div>
+    <div class="moodboard-list" id="moodboardsList">
+        {% if moodboards %}
+            {% for moodboard in moodboards %}
+                <div class="moodboard-card">
+                    <img class="moodboard-image" src="{{ moodboard['moodboard_picture'] }}" alt="{{ moodboard['moodboard_name'] }}">
+                    <div class="moodboard-name">{{ moodboard['moodboard_name'] }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No other boards.</p>
+        {% endif %}
     </div>
+</div>
 </div>
 
 <!-- Button to open the form -->
@@ -296,7 +296,6 @@ header {
 
 }
 
-
 .form-container .cancel {
   background-color: red;
   max-width: 120px;
@@ -310,8 +309,6 @@ header {
   opacity: 1;
 
 }
-
-
 
 .btn-group button {
   background-color: #04AA6D; /* Green background */
@@ -342,7 +339,4 @@ header {
   align-items: center;
 }
 </style>
-
-
-
 {% endblock %}
