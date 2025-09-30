@@ -175,3 +175,23 @@ So far the design is fulfilling the desired function as it is simple, unique and
 The Login page functions smoothly with nice aesthetics and the homepage(in-progress) has a clear layout, allowing for easy navigation. 
 Since the web homepage design hasn't been finalised yet, it's a good opportunity to recieve client feedback based on the last two pages, and incorporate it into the homepage design.
 find how the website looks so far in folder "Website setup"
+
+## Adding Interactivity
+Google lighthouse reports can be found in Lighthouse_reports folder. Dates are in the name.
+
+Interactive elements in my APP.
+I will be adding to my moodboard creation website, it the ability to create moodboards(+ tag function).
+New moodboard creation process:
+1. user clicks on new moodboard
+2. screen pops up where users input name of moodboard and any tags
+3. user returns to homesscreen(where they can see the moodboard they just created)
+
+the moodboard the user creates will pop up as an record in the moodboards databse. Unfilled fields(ID, user ID, Moodboard picture, datetime created, datetime last edited) will be filled automatically either randomly or according to a pattern.
+This code is slightly complex so I plan to work on it over the weekend.
+
+
+d) Run your test cases designed several weeks ago and document whether they work. Add notes on success/failure and updates to your README.md file.
+
+Client: developer presents their ideas progressively to their client over the two weeks. Client makes some comments about the app - is it fulfilling the main function you desired - i.e. connecting with your "people". Does it work as intended? What features have now been added and are they working?
+
+Critically analyse it based upon the stated purpose previously indicated by your developer :-)
