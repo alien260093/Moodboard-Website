@@ -62,8 +62,12 @@
   <div class="form-container">
     <h3>Create New Moodboard</h3>
     <input type="text" id="moodboardName" placeholder="Moodboard Name" required>
-    <label for="favorite">Favorite</label>
-    <input type="checkbox" id="favorite">
+  
+<div class="form-check">
+  <label for="favorite">Favorite</label>
+  <input type="checkbox" id="favorite">
+</div>
+
 <div class="btn-group">
     <button class="btn" onclick="confirmMoodboard()">Confirm</button>
     <button class="btn cancel" onclick="closeForm()">Cancel</button>
@@ -230,19 +234,24 @@ header {
   width: 280px;
 }
 
+
+
+
 .form-popup {
   position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9999; /* ensure popup is on top */
+  bottom: 0; right: 10px;
+  z-index: 9999;
   background-color: white;
+  border-radius: 8px;
 }
+
 
 .form-container {
   width: 350px;
-  height: 250px;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items top to bottom */
+  gap: 12px;              /* Space between items */
 }
 
 .form-container input[type=text] {
@@ -252,7 +261,6 @@ header {
   border: none;
   background: #f1f1f1;
   align-items: center;
-
 }
 
 .form-container input[type=text]:focus {
@@ -267,19 +275,27 @@ header {
   text-align: center;
 }
 
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between label and checkbox */
+}
+
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
-  padding: 16px 20px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 45%;
   opacity: 0.8;
   max-width: 120px;
   display: inline-block;
   justify-content: flex-end;
   text-align: center;
+
 }
+
 
 .form-container .cancel {
   background-color: red;
@@ -295,6 +311,8 @@ header {
 
 }
 
+
+
 .btn-group button {
   background-color: #04AA6D; /* Green background */
   border: 1px solid green; /* Green border */
@@ -302,6 +320,7 @@ header {
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
+  align-items: center;
 }
 
 /* Clear floats (clearfix hack) */
@@ -309,15 +328,18 @@ header {
   content: "";
   clear: both;
   display: table;
+  align-items: center;
 }
 
 .btn-group button:not(:last-child) {
   border-right: none; /* Prevent double borders */
+  align-items: center;
 }
 
 /* Add a background color on hover */
 .btn-group button:hover {
   background-color: #3e8e41;
+  align-items: center;
 }
 </style>
 

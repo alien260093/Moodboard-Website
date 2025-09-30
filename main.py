@@ -12,10 +12,14 @@ def index():
     return render_template('index.html', content=data)
 
 
-@app.route('/add.html', methods=['GET', 'POST'])
+@app.route('/login.html', methods=['GET', 'POST'])
 def login():
-    return render_template('add.html')
+    return render_template('login.html')
 
+
+@app.route('/new.html', methods=['GET', 'POST'])
+def new():
+    return render_template('new.html')
 
 @app.route('/about.html', methods=['GET', 'POST'])
 def homepage():
@@ -55,9 +59,7 @@ def homepage():
         moodboards=others
     )
 
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
-
-@app.route('/new.html', methods=['GET', 'POST'])
-def new():
-    return render_template('new.html')
