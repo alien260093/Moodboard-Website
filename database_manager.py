@@ -3,7 +3,7 @@ import sqlite3 as sql
 
 
 
-DB_path = "Database/data_source.db"
+DB_path = "data_source.db"
 
 def get_connection():
     con = sql.connect(DB_path)
