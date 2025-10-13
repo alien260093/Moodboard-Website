@@ -20,7 +20,9 @@ def login():
 
 @app.route('/new.html', methods=['GET', 'POST'])
 def new():
+    error = None
     if request.method == "POST":
+     try:
         name = request.form["mname"]
 
         # Checkbox: present in form only if checked
@@ -32,8 +34,9 @@ def new():
         dbHandler.add_moodboard(name, favourite, recently_opened, random_image)
 
         return redirect("/about.html")  # or return homepage()
-
-    return render_template('new.html')
+     except sqlite3.IntegrityError:
+        error = "Moodboard name must be unique."
+    return render_template('new.html', error=error)
 
 
 @app.route('/about.html', methods=['GET'])

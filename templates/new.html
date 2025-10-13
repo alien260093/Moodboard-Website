@@ -89,6 +89,11 @@ span.psw {
 
 <body>
 
+  {% if error %}
+  <div class="error-message" style="color: red; margin-bottom: 1em;">
+    {{ error }}
+  </div>
+{% endif %}
 <h2>Create Moodboard</h2>
 <form action="/new.html" method="post">
   <div class="container">
