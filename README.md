@@ -189,8 +189,32 @@ New moodboard creation process:
 the moodboard the user creates will pop up as an record in the moodboards databse. Unfilled fields(ID, user ID, Moodboard picture, datetime created, datetime last edited) will be filled automatically either randomly or according to a pattern.
 This code is slightly complex so I plan to work on it over the weekend.
 
-T4-W1 documentation
-Current refinements to make:
-refinements to make:
-- png-->avif
-- if click title or vision png, bring to boards page(might not)
+# Project process Documentation
+Creation process in dot-points.
+
+
+
+### Testing purposes
+Here is all the information needed to test the app including functions which can be tested
+Intro page
+- "How people use Vision" iis a drop-down menu
+- press "login with google" to proceed to the Login page
+Login page
+- users are required to input content into email and psd box, and tick the Terms of Service box to proceed. Press "login" to submit and proceed to homepage.
+- Clicking link Terms of Service will bring the user to a seperate webpage
+- Clicking link google account will bring user to About-Google webpage
+- pressing back brings user back to Intro page
+Homepage
+- menu is fully functional, clicking page headers will bring user to specific pages
+- searchbar and moodboards can't be accessed/used.
+- small form on bottom-right corner is functional, moodboard names must be unique. Moodboards will be categorised into "favourites" if "favourite" box is ticked
+New page
+- fully functinal extension-page used to create moodboards. Cancel button will bring users back to homepage.
+
+
+## Intructions on how to run the app
+1. download Visual Studio Code and ALL lnecessary dependencies including Pip and Python(or python3)
+2. Navigate to Moodboard Website homepage and click "Code", download ZIP file
+3. Extract ZIP file and open contents in vsstudio code
+4. Go to main.py and press the "run" button in the top-right corner
+5. open a brower, go to "http://localhost:5000/", this should take you to the Vision Intro page.
