@@ -146,10 +146,10 @@ Potential data query types needed:
 ### SQL Queries
 Here is the Excel databse: https://schoolsnsw-my.sharepoint.com/:x:/g/personal/tianna_liu1_education_nsw_gov_au/Eb0u3LLtonROve5Bz90Ep9cB6LIx-s8JwNC1Z7PSVi_aJw?e=QALNk7
 
+Halfway, i decided to have created moodboards logg
+Query 1. SELECT Username, Email FROM Users; - successs for old database
 
-Query 1. SELECT Username, Email FROM Users;
-
-Query 2. SELECT Status FROM Collaborators;
+Query 2. SELECT Status FROM Collaborators; - successs for old database
 
 Query 3. SELECT COUNT(DISTINCT Level of permission) FROM Collaborators;
 
@@ -190,8 +190,21 @@ the moodboard the user creates will pop up as an record in the moodboards databs
 This code is slightly complex so I plan to work on it over the weekend.
 
 
-d) Run your test cases designed several weeks ago and document whether they work. Add notes on success/failure and updates to your README.md file.
-
 Client: developer presents their ideas progressively to their client over the two weeks. Client makes some comments about the app - is it fulfilling the main function you desired - i.e. connecting with your "people". Does it work as intended? What features have now been added and are they working?
 
 Critically analyse it based upon the stated purpose previously indicated by your developer :-)
+
+T4-W1 documentation
+Current refinements to make:
+refinements to make:
+- add terms and conditions page
+- add functionality to "cancel" button on login screen
+- take away forgot password? button and add "login with google" subheading
+- change vscode extension catalogue title for about.html
+- remove button was clicked test feature
+- png-->avif
+- if click title or vision png, bring to boards page
+- for login, change from "username" to "example@gmail.com"
+- remove cancel button on mini form
+- add image to each moodboard instead of randomly generated
+
