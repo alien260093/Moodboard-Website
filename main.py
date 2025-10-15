@@ -14,7 +14,7 @@ def index():
 
 @app.route('/terms.html', methods=['GET'])
 def terms():
-    return render_template('terms.html', content=[])
+    return render_template('terms.html', show_menu=False)
 
 
 @app.route('/login.html', methods=['GET', 'POST'])
