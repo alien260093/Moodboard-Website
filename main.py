@@ -22,15 +22,19 @@ def login():
 def new():
     error = None
     if request.method == "POST":
+     images = [
+            "img1.png",
+            "img2.png",
+            "img3.png",
+            "img4.png",
+            "img5.png"
+        ]
+     random_image = random.choice(images)
      try:
         name = request.form["mname"]
-
         # Checkbox: present in form only if checked
         favourite = request.form.get("favorite") is not None
-
         recently_opened = True  # default
-        random_image = f"img_{random.randint(1,1000)}.png"
-
         dbHandler.add_moodboard(name, favourite, recently_opened, random_image)
 
         return redirect("/about.html")  # or return homepage()
@@ -42,7 +46,6 @@ def new():
 @app.route('/about.html', methods=['GET'])
 def homepage():
     rows = dbHandler.list_moodboards()
-
     moodboards_dicts = [
     {
         "moodboard_name": m[0],
@@ -52,7 +55,6 @@ def homepage():
     }
     for m in rows
 ]
-
 
 
     recently_opened = [m for m in moodboards_dicts if m["recent"]]

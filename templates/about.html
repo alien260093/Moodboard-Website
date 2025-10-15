@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
-
 {% block content %}
+<title>Welcome</title>
 <header>Your Boards</header>
 <div class="container">
     <input type="text" class="search-bar" placeholder="Search Moodboard Names..." id="searchInput">
@@ -11,7 +11,7 @@
         {% if recently_opened %}
             {% for moodboard in recently_opened %}
                 <div class="moodboard-card">
-                    <img class="moodboard-image" src="{{ moodboard['moodboard_picture'] }}" alt="{{ moodboard['moodboard_name'] }}">
+                    <img class="moodboard-image" src="{{ url_for('static', filename='images/' ~ moodboard['moodboard_picture']) }}" alt="{{ moodboard['moodboard_name'] }}">
                     <div class="moodboard-name">{{ moodboard['moodboard_name'] }}</div>
                 </div>
             {% endfor %}
@@ -27,7 +27,7 @@
         {% if favourites %}
             {% for moodboard in favourites %}
                 <div class="moodboard-card">
-                    <img class="moodboard-image" src="{{ moodboard['moodboard_picture'] }}" alt="{{ moodboard['moodboard_name'] }}">
+                    <img class="moodboard-image" src="{{ url_for('static', filename='images/' ~ moodboard['moodboard_picture']) }}" alt="{{ moodboard['moodboard_name'] }}">
                     <div class="moodboard-name">{{ moodboard['moodboard_name'] }}</div>
                 </div>
             {% endfor %}
@@ -44,7 +44,7 @@
         {% if moodboards %}
             {% for moodboard in moodboards %}
                 <div class="moodboard-card">
-                    <img class="moodboard-image" src="{{ moodboard['moodboard_picture'] }}" alt="{{ moodboard['moodboard_name'] }}">
+                    <img class="moodboard-image" src="{{ url_for('static', filename='images/' ~ moodboard['moodboard_picture']) }}" alt="{{ moodboard['moodboard_name'] }}">
                     <div class="moodboard-name">{{ moodboard['moodboard_name'] }}</div>
                 </div>
             {% endfor %}
@@ -71,7 +71,6 @@
 
     <div class="btn-group">
       <button type="submit" class="btn">Confirm</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
     </div>
   </form>
 </div>
@@ -274,6 +273,7 @@ header {
   justify-content: space-between;
   margin-top: 10px;
   text-align: center;
+  width: 310px;
 }
 
 .form-check {
@@ -288,23 +288,15 @@ header {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  width: 45%;
+  width: 100%;
   opacity: 0.8;
-  max-width: 120px;
   display: inline-block;
-  justify-content: flex-end;
+  justify-content: center;
   text-align: center;
+  align-items: center;
 
 }
 
-.form-container .cancel {
-  background-color: red;
-  max-width: 120px;
-  display: inline-block;
-  justify-content: flex-end;
-  text-align: center;
-
-}
 
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
