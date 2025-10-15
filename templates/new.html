@@ -120,26 +120,9 @@ span.psw {
         const button = document.getElementById('cancelbtn');
         if (button) {
             button.addEventListener('click', function () {
-                alert('Button was clicked!');
                 window.location.href = "{{ url_for('homepage') }}"; // Make sure this is rendered via Flask
             });
         }
-
-
-
-        // Checkbox Handling
-        const checkbox = document.getElementById('favorite');
-        if (checkbox) {
-            checkbox.addEventListener('click', function () {
-                if (checkbox.checked) {
-                    alert("Checkbox is checked");
-                } else {
-                    alert("Checkbox is unchecked");
-                }
-            });
-        }
-    });
-
-
+} );
 </script>
 </html>

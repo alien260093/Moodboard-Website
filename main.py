@@ -12,6 +12,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', content=[])
 
+@app.route('/terms.html', methods=['GET'])
+def terms():
+    return render_template('terms.html', content=[])
+
 
 @app.route('/login.html', methods=['GET', 'POST'])
 def login():

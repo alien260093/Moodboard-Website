@@ -97,15 +97,15 @@
   </div>
 
   <div class="container">
-    <label for="uname"><b>Example@email.com</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="uname"><b>Google email</b></label>
+    <input type="text" placeholder="Example@email.com" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Password" name="psw" required>
 
     <button type="submit">Login</button>
     <label>
-      <input type="checkbox" checked="checked" name="terms" required> I agree to the Terms and Conditions
+      <input type="checkbox" checked="checked" name="terms" required> <a href="{{ url_for('terms') }}" target="_blank">I agree to the Terms of Service</a>
     </label>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -113,8 +113,8 @@
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <button type="button" class="cancelbtn" id="cancelbtn">Back</button>
+    <span class="psw">Please login with your <a href="https://www.google.com/intl/en-GB/account/about/" target="_blank">google account</a></span>
   </div>
 </form>
 
@@ -128,6 +128,13 @@
     // Redirect to another page
     window.location.href = "about.html";
   });
+        // Cancel Button Handling
+        const button = document.getElementById('cancelbtn');
+        if (button) {
+            button.addEventListener('click', function () {
+                window.location.href = "{{ url_for('index') }}"; // Make sure this is rendered via Flask
+            });
+        }
 </script>
 
 </body>
