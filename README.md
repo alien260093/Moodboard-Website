@@ -212,7 +212,6 @@ Homepage
 New page
 - fully functinal extension-page used to create moodboards. Cancel button will bring users back to homepage.
 
-
 ## Intructions on how to run the app
 1. download Visual Studio Code and ALL lnecessary dependencies including Pip and Python(or python3)
 2. Navigate to Moodboard Website homepage and click "Code", download ZIP file
