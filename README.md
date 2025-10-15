@@ -146,18 +146,18 @@ Potential data query types needed:
 ### SQL Queries
 Here is the Excel databse: https://schoolsnsw-my.sharepoint.com/:x:/g/personal/tianna_liu1_education_nsw_gov_au/Eb0u3LLtonROve5Bz90Ep9cB6LIx-s8JwNC1Z7PSVi_aJw?e=QALNk7
 
-Halfway, i decided to have created moodboards logg
+Currently I have an old database and new database. In creating the Create Board function, I made a new database with table:moodboards to add qualities autoincrement and unique key.
 Query 1. SELECT Username, Email FROM Users; - successs for old database
 
 Query 2. SELECT Status FROM Collaborators; - successs for old database
 
-Query 3. SELECT COUNT(DISTINCT Level of permission) FROM Collaborators;
+Query 3. SELECT COUNT(DISTINCT Level of permission) FROM Collaborators; - successs for old database
 
-Query 4. SELECT * FROM Users/ ORDER BY Username;
+Query 4. SELECT * FROM Users/ ORDER BY Username; - successs for old database
 
-Query 5. SELECT * FROM Moodboards/ WHERE Recent = 'TRUE';
+Query 5. SELECT * FROM moodboards/ WHERE recent = 'TRUE'; - success for new database
 
-Query 6. SELECT * FROM Users/ WHERE User ID >90;
+Query 6. SELECT * FROM Users/ WHERE User ID >90; - successs for old database
 
 ## Creating and Styling Webpages (HTML and CSS)
 2/9/2025 the setup has been completed, currently working on designing the webpages.
@@ -189,22 +189,8 @@ New moodboard creation process:
 the moodboard the user creates will pop up as an record in the moodboards databse. Unfilled fields(ID, user ID, Moodboard picture, datetime created, datetime last edited) will be filled automatically either randomly or according to a pattern.
 This code is slightly complex so I plan to work on it over the weekend.
 
-
-Client: developer presents their ideas progressively to their client over the two weeks. Client makes some comments about the app - is it fulfilling the main function you desired - i.e. connecting with your "people". Does it work as intended? What features have now been added and are they working?
-
-Critically analyse it based upon the stated purpose previously indicated by your developer :-)
-
 T4-W1 documentation
 Current refinements to make:
 refinements to make:
-- add terms and conditions page
-- add functionality to "cancel" button on login screen
-- take away forgot password? button and add "login with google" subheading
-- change vscode extension catalogue title for about.html
-- remove button was clicked test feature
 - png-->avif
-- if click title or vision png, bring to boards page
-- for login, change from "username" to "example@gmail.com"
-- remove cancel button on mini form
-- add image to each moodboard instead of randomly generated
-
+- if click title or vision png, bring to boards page(might not)
