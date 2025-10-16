@@ -58,7 +58,6 @@ My colour palette will be grey because grey is a flexible colour which will adap
 Next week I'm planning on refining my web design on Wix because so far it is very rough, and I need to see how it will look and flow on a laptop.
 
 
-
 ## Designing an algorithm: The Login Algorithm
 ### My evaluation of my login function
 The algorithm I'm planning to design for Vision is the login function. This would include starting on the login page --> inputting username and password and checking the terms and conditions box --> pressing the login button --> being brought to the home page. The verification will work for the user's google account only. In order for the verification to work, the user username and password must match with an existing google account.
@@ -191,8 +190,31 @@ This code is slightly complex so I plan to work on it over the weekend.
 
 # Project process Documentation
 Creation process in dot-points.
-- 
-
+- made Github repository: Moodboard Website + this Readme file
+- defined the aim and fcuntions of my website
+- Made 2 alternate web designs and their storyboards
+- set up dev envieonment in vsstudio code
+- set up folders and files in correct formats(.css, .py, .png, .html)
+- added logo images
+- set up database_db
+- set up pages in main.py and their basic formats
+- set up Intro page and login css
+- got login function working(username, psw and Terms of Service checkbox required)
+- finalised Intro and login page css
+- set up homepage HTML and CSS, mooadboard cards and card categories(Favourites, Recently opened, Moodboards)
+- added popp form to home page
+- created add moodboard function linked to database
+- made New page with a from for moodboard creation
+- fixed issue with categorising moodboards in recent or favourites. If a entry in the datatable existed, bool =True, so everything was set to true. I fixed it by determining whether entry was <1. Categorising now works.
+- added SQLite
+- added autoincrement to moodboard ID
+- Made moodboard names unique, if not unique an error message will pop-up.
+- added images to moodboard cards
+- added terms of Service and about-Google link
+- removed menu from Terms of Service webpage
+- fixed a menu display issue where menu was off-center
+- Final commits, tests and task submission.
+There are more in-depth explainations of the creation process earlier in this Readme file.
 
 
 ### Testing purposes
