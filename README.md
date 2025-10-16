@@ -206,7 +206,7 @@ Creation process in dot-points.
 - created add moodboard function linked to database
 - made New page with a from for moodboard creation
 - fixed issue with categorising moodboards in recent or favourites. If a entry in the datatable existed, bool =True, so everything was set to true. I fixed it by determining whether entry was <1. Categorising now works.
-- added SQLite
+- added SQLite(late)
 - added autoincrement to moodboard ID
 - Made moodboard names unique, if not unique an error message will pop-up.
 - added images to moodboard cards
